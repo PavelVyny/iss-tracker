@@ -45,8 +45,8 @@ class Map extends Component {
 	fetch('https://api.wheretheiss.at/v1/satellites/25544')
 	  .then(res => res.json())
 	  .then(({ latitude, longitude }) => ({
-		lat: parseFloat(latitude),
-		lng: parseFloat(longitude),
+		lat: parseFloat(latitude).toFixed(3),
+		lng: parseFloat(longitude).toFixed(3),
 	  }))
 	  .then(coords => {
 		this.setState({ coords });
