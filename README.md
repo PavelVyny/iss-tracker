@@ -5,6 +5,7 @@ This project was bootstrapped with Create React App
 In the project directory, you can run:
 
 ### `npm start`
+(Install node_modules first)
 
 ### ISS tracker
 - The application monitors the movement of the ISS, displays its coordinates on Google map, shows the date and time (in the UTC format), as well as the ISS crew. All data is updated every 5 seconds.
