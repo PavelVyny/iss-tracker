@@ -42,11 +42,11 @@ class Map extends Component {
   }
 
   getCoords() {
-	fetch('http://api.open-notify.org/iss-now.json')
+	fetch('https://api.wheretheiss.at/v1/satellites/25544')
 	  .then(res => res.json())
-	  .then(({ iss_position }) => ({
-		lat: parseFloat(iss_position.latitude),
-		lng: parseFloat(iss_position.longitude),
+	  .then(({ latitude, longitude }) => ({
+		lat: parseFloat(latitude),
+		lng: parseFloat(longitude),
 	  }))
 	  .then(coords => {
 		this.setState({ coords });
