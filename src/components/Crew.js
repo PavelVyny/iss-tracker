@@ -29,6 +29,9 @@ class Crew extends Component {
 				});
 			}
 		)
+		.catch(error => {
+			this.setState({ error });
+		  });
 	}
 	componentDidMount(){
 		this.getMembers()
@@ -41,6 +44,14 @@ class Crew extends Component {
 	}
 	render(){
 		const{items} = this.state;
+		const {error} = this.state;
+		if (error) {
+			return (
+			  <div className="warning">
+				Houston, we lost all astros...
+			  </div>
+			);
+		  }
 		return(
 			<div className="crew">
 				{items.map((member, index) => (

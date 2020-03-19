@@ -5,7 +5,7 @@ const CrewMember = ({member}) => {
 	return (
 		<div className="crew__member">
 			<img className="crew__picture" src={picture}></img>
-			<div className="crew__member-name">{member.name}</div>
+	<div className="crew__member-name">{member.name} ({member.craft})</div>
 		</div>
 	)
 }
