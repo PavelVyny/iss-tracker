@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import CurDate from './Date';
+import Crew from './Crew';
+import Map from './Map';
 
 
 class App extends Component {
@@ -7,13 +9,14 @@ class App extends Component {
 	return (
 
 		<main className="wrapper">
-		<section className="tracker-map">
 			
-		</section>
-		<aside className="tracker-aside">
-			<CurDate />
-		</aside>
-	  </main>
+			<Map />
+
+			<aside className="tracker-aside">
+				<CurDate />
+				<Crew />
+			</aside>
+		</main>
 
 	);
   }

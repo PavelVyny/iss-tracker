@@ -36,6 +36,7 @@ class CurDate extends Component {
 		) 
 	}
 	componentDidMount(){
+		this.getDate()
 	  this.intervalId = setInterval(() => {
 		this.getDate() 
 		}, 5000);
@@ -47,11 +48,11 @@ class CurDate extends Component {
 		const { hours, minutes, seconds, date } = this.state
 		return (
 			 <div className="date">
-				<h2 className="date__head">Current UTC time: 
+				<h4 className="date__head">Current UTC time: 
 					<span className="date__time">
 						<span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
 					</span>   
-				</h2>
+				</h4>
 				 <span className="date__full">{date}</span>    
 			</div>
 					

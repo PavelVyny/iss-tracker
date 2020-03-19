@@ -1,0 +1,103 @@
+h1, h2, h3, h4, h5, h6, p {
+	margin: unset;
+}
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	background-color: ivory;
+	padding: 20px;
+	@media (max-width: 950px) {
+		flex-direction: column;
+	}
+   	
+}
+
+
+.tracker {
+	width: 65%;
+	border: 4px solid skyblue;
+    background-color: #F9E7D1;
+    border-radius: 5px;
+	&-location {
+		padding: 5px 10px 10px 15px;
+		background-color: #F9E7D1;
+		margin-bottom: 10px;
+		border-radius: 10px;
+		&__lng {
+			padding-right: 20px;
+		}
+		&__marker {
+			width: 50px;
+			transform: translate(-50%, -50%);
+		}
+	}
+	&-map {
+		width: 98%;
+		height: 350px;
+		border: 7px solid deepskyblue;
+		border-radius: 40px;
+		overflow: hidden;
+		margin: auto;
+		margin-bottom: 10px;
+	}
+	&-aside {
+		width: 30%;
+		height: fit-content;
+		border: 3px solid skyblue;
+		border-radius: 5px;
+		@media (max-width: 950px) {
+			width: 100%;
+		}
+	}
+	@media (max-width: 950px) {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+}
+
+.date {
+	padding: 5px 10px 10px 15px;
+	background-color: #F9E7D1;
+	border-bottom: 2px solid skyblue;
+	margin-bottom: 10px;
+	&__time {
+		margin-left: 7px;
+	}
+}
+
+.crew {
+	padding: 0 5px;
+	&__member {
+		display: flex;
+		align-items: center;
+		color: navy;
+		background-color: #F9E7D1;
+		margin-bottom: 15px;
+		border-radius: 50px;
+		font-size: 1.8rem;
+		&-name {
+			overflow: hidden;
+    		text-overflow: ellipsis;
+		}
+		@media (max-width: 950px) {
+			width: 48%;
+		}
+		@media (max-width: 540px) {
+			width: 100%;
+			font-size: 1.5rem;
+		}
+	}
+	&__picture {
+		width: 75px;
+		margin-right: 15px;
+	}
+	@media (max-width: 950px) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 0px 10px;
+	}
+	@media (max-width: 540px) {
+		padding: 0px 5px;
+	}
+}
